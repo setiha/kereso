@@ -1,0 +1,28 @@
+@import '../node_modules/bootstrap/scss/bootstrap-grid';
+
+$bg-color: purple;
+
+#filters {
+  padding: 0.5rem;
+  box-sizing: border-box;
+
+  #nameFilter {
+width:100%;
+  }
+}
+
+div.row {
+  div.col-4 {
+    div {
+      padding: 0.5rem 1rem;
+      border: 1px solid black;
+      border-radius: 1rem;
+      text-align: center;
+      cursor: pointer;
+      margin-bottom: 1rem;
+      &:hover{
+        background-color:lightcoral;
+      }
+    }
+  }
+}

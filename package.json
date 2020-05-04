@@ -4,14 +4,22 @@
   "description": "Elso kalandozasunk NPM foldon",
   "main": "scripts-vue.js",
   "dependencies": {
+    "bootstrap": "^4.4.1",
     "js": "^0.1.0",
     "vue.js": "^0.3.2"
   },
   "devDependencies": {
-    "http-server": "^0.12.3"
+    "concurrently": "^5.2.0",
+    "http-server": "^0.12.3",
+    "node-sass": "^4.14.0",
+    "opener": "^1.5.1"
   },
   "scripts": {
-    "test": "mocha"
+    "preinstall": "echo elindult vazze",
+    "serve": "http-server -a localhost -p 80 -s",
+    "open": "opener http://localhost",
+    "sass": "node-sass --output-style compressed src/main.scss -o dist -w",
+    "dev": "concurrently \"npm run sass\" \"npm run serve\" \"npm run open\""
   },
   "repository": {
     "type": "git",
