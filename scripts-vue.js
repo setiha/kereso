@@ -26,7 +26,7 @@ let app = new Vue({
         ];
         this.filmCollection.sort(function(a,b){
             return a.localeCompare(b);
-        })
+        });
     },
 
     methods:{
